@@ -39,3 +39,13 @@
 | `LIMIT n` | max n rows, last clause | [12. Limit](02_queries.ipynb#12-limit) |
 | `CASE WHEN ... THEN ... ELSE ... END` | if-then-else, creates a new column; first true `WHEN` wins | [13. Case](02_queries.ipynb#13-case) |
 | `IN (...)` | equals any value in a list, shorter than chained `OR`s (extra, not in the course) | [Project, Task 8](02_project_ny_restaurants.ipynb#task-8-several-neighborhoods) |
+
+## 03 Tables and Keys
+
+| Key word | Does | Section |
+|---|---|---|
+| `REFERENCES table(column)` | foreign key: a filled-in value must exist in that column of the other table | [3. Syntax](03_tables_and_keys.ipynb#3-syntax-references) |
+| foreign key | column that points to the primary key of another table (like the lookup value in `XLOOKUP`) | [2. How](03_tables_and_keys.ipynb#2-how-primary-keys-and-foreign-keys) |
+| `INTEGER` / `REAL` / `TEXT` / `DATE` | whole number / decimal / text / date (SQLite stores dates as text like `'2020-03-15'`) | [3. Syntax](03_tables_and_keys.ipynb#3-syntax-references) |
+| `PRAGMA foreign_keys = ON` | turns foreign key checks on for this connection, off by default in SQLite | [Checkpoint 6](03_tables_and_keys.ipynb#checkpoint-6-see-the-foreign-key-work) |
+| `NOT NULL` vs `REFERENCES` | `NOT NULL`: may the cell be empty? `REFERENCES`: which values are allowed when filled | [6. My mistakes](03_tables_and_keys.ipynb#6-my-mistakes) |

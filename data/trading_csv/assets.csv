@@ -1,0 +1,13 @@
+asset_id,asset_class,symbol
+1,crypto,BTC
+2,crypto,ETH
+3,crypto,SOL
+4,crypto,XRP
+5,stock,AAPL
+6,stock,MSFT
+7,stock,SAP
+8,stock,OMV
+9,etf,MSCI World
+10,etf,S&P 500
+11,metal,Gold
+12,metal,Silver
