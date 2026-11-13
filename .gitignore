@@ -1,2 +1,5 @@
 __pycache__/
 .ipynb_checkpoints/
+
+# rebuilt by the setup cell in notes/03_project_trading_practice.ipynb
+data/trading_practice.db

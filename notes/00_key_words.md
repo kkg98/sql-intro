@@ -49,3 +49,22 @@
 | `INTEGER` / `REAL` / `TEXT` / `DATE` | whole number / decimal / text / date (SQLite stores dates as text like `'2020-03-15'`) | [3. Syntax](03_tables_and_keys.ipynb#3-syntax-references) |
 | `PRAGMA foreign_keys = ON` | turns foreign key checks on for this connection, off by default in SQLite | [Checkpoint 6](03_tables_and_keys.ipynb#checkpoint-6-see-the-foreign-key-work) |
 | `NOT NULL` vs `REFERENCES` | `NOT NULL`: may the cell be empty? `REFERENCES`: which values are allowed when filled | [6. My mistakes](03_tables_and_keys.ipynb#6-my-mistakes) |
+
+## 03 Project: Trading Practice
+
+Interview-style practice. Only key words not covered in the lessons above.
+
+| Key word | Does | Section |
+|---|---|---|
+| `COUNT(*)` / `SUM(col)` | aggregates: number of rows / total of a column | [Project, Task 1](03_project_trading_practice.ipynb#task-1) |
+| `GROUP BY col` | collapses rows into one row per value; fewer rows than the source | [Project, Task 1](03_project_trading_practice.ipynb#task-1) |
+| `JOIN ... ON` (INNER) | combines two tables, keeps only rows that match | [Project, Task 1](03_project_trading_practice.ipynb#task-1) |
+| `LEFT JOIN ... WHERE ... IS NULL` | keeps every row of the left table; `IS NULL` on the right side finds rows with **no** match (e.g. never traded) | [Project, Task 2](03_project_trading_practice.ipynb#task-2) |
+| `WITH name AS (...)` | CTE: a named temporary result, queried like a table | [Project, Task 3](03_project_trading_practice.ipynb#task-3) |
+| `ROW_NUMBER() OVER (PARTITION BY ... ORDER BY ...)` | window function: numbers rows within each group without collapsing them; same rows plus a new column | [Project, Task 3](03_project_trading_practice.ipynb#task-3) |
+| `COUNT(DISTINCT col)` | counts unique values (users, not trades) | [Project, Task 4](03_project_trading_practice.ipynb#task-4) |
+| `HAVING` | filters **after** `GROUP BY`, on totals; repeat the aggregate, an alias only works in SQLite/MySQL | [Project, Task 4](03_project_trading_practice.ipynb#task-4) |
+| `(SELECT COUNT(*) FROM t)` | scalar subquery: a query that returns one value, used like a column | [Project, Warm-up](03_project_trading_practice.ipynb#warm-up) |
+| `substr(text, start, length)` | cuts part of a text, e.g. `'2026-10'` from a timestamp, to group by month | [Project, Task 6](03_project_trading_practice.ipynb#task-6) |
+| `ROUND(100.0 * a / b, 1)` | percentage; `100.0` forces decimal division (whole ÷ whole cuts off decimals) | [Project, Task 7](03_project_trading_practice.ipynb#task-7) |
+| `>= start AND < next_start` | safe date range on text dates; `<=` on a date drops that day's trades | [Project, My mistakes](03_project_trading_practice.ipynb#my-mistakes) |

@@ -23,6 +23,7 @@ from the raw CSV data up to window functions, on two datasets (my BSc retail dat
 | Notebook | Covers |
 |---|---|
 | [03 Tables and Keys](notes/03_tables_and_keys.ipynb) | foreign keys (`REFERENCES`), 9 linked tables, loading CSV data |
+| [03 Project: Trading Practice](notes/03_project_trading_practice.ipynb) | interview-style questions on a trading app: `JOIN`, `LEFT JOIN … IS NULL`, `GROUP BY` / `HAVING`, CTEs, `ROW_NUMBER`, conversion rate |
 | 04 Select | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT` on the retail data |
 | 05 Aggregates | `COUNT`, `SUM`, `AVG`, `GROUP BY`, `HAVING` |
 | 06 Joins | table aliases, `INNER` vs `LEFT JOIN`, joining 3 tables |
@@ -46,6 +47,7 @@ Quick reference: [Key words cheat sheet](notes/00_key_words.md)
 | `restaurants.db` | 53 NYC restaurants (Codecademy data) |
 | `retail_csv/` | retail database from my BSc Business Analytics I assignment (9 tables) |
 | `trading_csv/` | synthetic trading app data: 500 users, 12 assets, about 2,400 trades |
+| `trading_practice.db` | not in the repo: built by the setup cell of 03 Project: Trading Practice (3,000 users, 20 assets, about 16,500 trades) |
 
 `create_stocks.sql` and `create_restaurants.sql` rebuild their tables.
 
